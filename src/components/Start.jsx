@@ -24,8 +24,8 @@ const Start = () => {
       setImage(storedImage);
     }
 
-    bgMusic.loop = true;
-    bgMusic.volume = 0.5;
+    bgMusic.loop = false;
+    bgMusic.volume = 0.1;
 
     return () => bgMusic.pause(); // Stop music on unmount
   }, []);
@@ -160,7 +160,7 @@ const Start = () => {
   
   const updateBestTime = async (timeTaken) => {
     try {
-      const response = await fetch("http://localhost:8000/update-best-time/", {
+      const response = await fetch("https://signpuzzle.onrender.com/update-best-time/", {
         method: "POST",
         credentials: "include", // Send cookie
         headers: {
@@ -217,13 +217,13 @@ const Start = () => {
             isSolved ? "border-green-500" : "border-orange-500"
           } transition-all duration-300 rounded-lg`}
           style={{ width: `${TILE_SIZE * GRID_SIZE}px`, height: `${TILE_SIZE * GRID_SIZE}px` }}
-          onClick={() => bgMusic.play()} // Ensures user interaction to start music
+          onPointerDown={() => bgMusic.play()} // Ensures user interaction to start music
         >
           {tiles.map((tile, index) => (
             <div
               key={index}
               className="absolute w-20 h-20 bg-gray-800 border border-gray-700 cursor-pointer transition-all duration-300 rounded-md"
-              onClick={() => moveTile(tile)}
+              onPointerDown={() => moveTile(tile)}
               style={{
                 backgroundImage: `url(${image})`,
                 backgroundSize: `${GRID_SIZE * 100}% ${GRID_SIZE * 100}%`,
@@ -263,7 +263,7 @@ const Start = () => {
             </Link>
 
             <button
-              onClick={() => window.location.reload()}
+              onPointerDown={() => window.location.reload()}
               className="mt-4 bg-green-500 px-6 py-3 rounded-lg text-white shadow-lg hover:bg-green-600 transition"
             >
               Play Again

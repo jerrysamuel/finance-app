@@ -8,4 +8,4 @@ services:
         value: https://signpuzzle.onrender.com  # backend URL
     plan: free
     autoDeploy: true
-    repo: jerysamuel/finance-app
+    repo: github.com/jerrysamuel/finance-app

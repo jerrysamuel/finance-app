@@ -1,0 +1,11 @@
+services:
+  - type: static
+    name: signpuzzle-frontend
+    buildCommand: "npm run build"
+    staticPublishPath: "dist"
+    envVars:
+      - key: VITE_API_BASE_URL
+        value: https://signpuzzle.onrender.com  # backend URL
+    plan: free
+    autoDeploy: true
+    repo: jerysamuel/finance-app

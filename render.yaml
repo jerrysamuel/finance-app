@@ -1,5 +1,5 @@
 services:
-  - type: staticPublishPath
+  - type: static
     name: signpuzzle-frontend
     buildCommand: "npm run build"
     staticPublishPath: "dist"

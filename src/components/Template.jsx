@@ -3,15 +3,15 @@ import { useState } from "react";
 import Navbar from "./Navbar";
 
 const templates = [
-  { id: 1, src: "/src/assets/claire.jpg", name: "Template 1" },
-  { id: 2, src: "/src/assets/cybrox.jpg", name: "Template 2" },
-  { id: 3, src: "/src/assets/lj.jpg", name: "Template 3" },
-  { id: 4, src: "/src/assets/potter.jpg", name: "Template 4" },
-  { id: 5, src: "/src/assets/signdaddy.jpg", name: "Template 5" },
-  { id: 6, src: "/src/assets/signderella.jpg", name: "Template 6" },
-  { id: 7, src: "/src/assets/tajudeen.jpg", name: "Template 7" },
-  { id: 8, src: "/src/assets/truth.jpg", name: "Template 8" },
-  { id: 9, src: "/src/assets/zoe.jpg", name: "Template 9" }
+  { id: 1, src: "/public/assets/claire.jpg", name: "Template 1" },
+  { id: 2, src: "/public/assets/cybrox.jpg", name: "Template 2" },
+  { id: 3, src: "/public/assets/lj.jpg", name: "Template 3" },
+  { id: 4, src: "/public/assets/potter.jpg", name: "Template 4" },
+  { id: 5, src: "/public/assets/signdaddy.jpg", name: "Template 5" },
+  { id: 6, src: "/public/assets/signderella.jpg", name: "Template 6" },
+  { id: 7, src: "/public/assets/tajudeen.jpg", name: "Template 7" },
+  { id: 8, src: "/public/assets/truth.jpg", name: "Template 8" },
+  { id: 9, src: "/public/assets/zoe.jpg", name: "Template 9" }
 ];
 
 const SelectTemplate = () => {

@@ -12,7 +12,7 @@ const Navbar = () => {
 
       if (res.ok) {
         console.log(data.message);
-        window.location.href = "/Signin";
+        window.location.href = "/";
       } else {
         console.error("Logout failed:", data.detail || "Unknown error");
       }

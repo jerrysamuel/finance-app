@@ -5,7 +5,7 @@ function Leaderboard() {
   const [leaderboard, setLeaderboard] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8000/leaderboard/")
+    fetch("https://signpuzzle.onrender.com/leaderboard/")
       .then((res) => res.json())
       .then((data) => {
         setLeaderboard(data);

@@ -3,7 +3,7 @@ import React from "react";
 const Navbar = () => {
   const logout = async () => {
     try {
-      const res = await fetch("http://localhost:8000/logout/", {
+      const res = await fetch("https://signpuzzle.onrender.com/logout/", {
         method: "POST",
         credentials: "include",
       });
